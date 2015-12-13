@@ -94,7 +94,7 @@ var projects = {
       "dates" : "2015",
       "description" : "A game for all ages with a simple driving focus-will you eat the cookie?",
       "images" : [
-        "images/lowClouds.jpg",
+        "images/dockDaze.jpg",
         "images/foggyLakeshore.jpg"
         ]
     }
@@ -165,7 +165,9 @@ if(bio.skills.length > 0) {
 
 
 
-/////////////work loop///////////////
+/////////////work for/in loop within function///////////////
+
+function displayWork() {
 
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
@@ -191,7 +193,11 @@ for (job in work.jobs) {
 	$(".work-entry:last").append(formattedDescription);
 
 
+	}
+
 }
+
+displayWork();
 
 
 ////////////////////projects//////////////////////
@@ -289,6 +295,45 @@ $("#footerContacts").append(formattedGithubFoot);
 
 
 
+
+////////////////////log page clicks////////////////////////////////
+
+
+$(document).click(function(loc) {
+	var x = loc.pageX;
+	var y = loc.pageY;
+
+	logClicks(x,y);
+
+});
+
+///////////string to array manipulation/////////////////
+
+var myString = "This is my string !";
+var myStringSplit = myString.split(" ");
+myStringSplit
+
+
+///////////location array function///////////////////
+
+function locationizer(work_obj) {
+	var locationArray = [];
+
+	for (job in work_obj.jobs) {
+		var newLocation = work_obj.jobs[job].location;
+		locationArray.push(newLocation);
+
+	}
+
+	return locationArray;
+	}
+
+	console.log(locationizer(work));
+
+
+////////////add internationalize button for names///////////
+
+$("#main").append(internationalizeButton);
 
 
 /*var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
