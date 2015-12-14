@@ -95,8 +95,8 @@ var projects = {
       "dates" : "2015",
       "description" : "A game for all ages with a simple driving focus-will you eat the cookie?",
       "images" : [
-        "images/pigFozFogSun.jpg",
-        "images/lakeSunDown.jpg"
+        "images/lakeSunDown.jpg",
+        "images/pigFozFogSun.jpg"
         ]
     }
     ]
