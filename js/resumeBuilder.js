@@ -17,7 +17,7 @@ var bio = {
 	},
 	"welcomeMessage": "Hello and Welcome!",
 	"skills": ["eternally optimistic", "wrecklessly enthusiastic", "undeniably extant","pics like this"],
-	"biopic": "images/lowClouds.jpg",
+	"biopic": "images/foggyLakeshore.jpg",
 	"display": "function"
 
 };
