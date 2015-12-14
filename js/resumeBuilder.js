@@ -17,7 +17,7 @@ var bio = {
 	},
 	"welcomeMessage": "Hello and Welcome!",
 	"skills": ["eternally optimistic", "wrecklessly enthusiastic", "undeniably extant","pics like this"],
-	"biopic": "images/pigFozFogSun.jpg",
+	"biopic": "images/lowClouds.jpg",
 	"display": "function"
 
 };
@@ -95,8 +95,8 @@ var projects = {
       "dates" : "2015",
       "description" : "A game for all ages with a simple driving focus-will you eat the cookie?",
       "images" : [
-        "images/dockDaze.jpg",
-        "images/foggyLakeshore.jpg"
+        "images/pigFozFogSun.jpg",
+        "images/lakeSunDown.jpg"
         ]
     }
     ]
