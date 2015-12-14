@@ -11,6 +11,7 @@ var bio = {
 		"mobile": "555-555-5555",
 		"email": "barronrt@gmail.com",
 		"github": "github.com/barronrt",
+		"githubLink": "github.com/barronrt",
 		"twitter": "something",
 		"location": "Atlanta"
 	},
@@ -123,8 +124,12 @@ $("#topContacts").append(formattedEmail);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 $("#topContacts").append(formattedTwitter);
 
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("#", bio.contacts.githubLink);
 $("#topContacts").append(formattedGithub);
+
+
+
+
 
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
@@ -334,6 +339,27 @@ function locationizer(work_obj) {
 ////////////add internationalize button for names///////////
 
 $("#main").append(internationalizeButton);
+
+
+function inName(name) {
+	
+	
+	var nameArray = name.trim().split(" ");
+	firstIntName = nameArray[0].slice(0,1).toUpperCase() + 
+	nameArray[0].slice(1).toLowerCase();
+	lastIntName = nameArray[1].toUpperCase();
+	var internationalName = firstIntName + lastIntName;
+	console.log(internationalName);
+
+
+	return internationalName;
+
+	}
+
+
+
+
+
 
 
 /*var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
