@@ -13,7 +13,8 @@ var bio = {
 		"github": "github.com/barronrt",
 		"githubLink": "github.com/barronrt",
 		"twitter": "something",
-		"location": "Atlanta"
+		"location": "Atlanta",
+		"locationLink": "https://www.google.com/search?q=atlanta&espv=2&biw=1535&bih=791&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjGoPDKqdvJAhWKMSYKHSagDx8Q_AUICCgD&dpr=1"
 	},
 	"welcomeMessage": "Hello and Welcome!",
 	"skills": ["eternally optimistic", "wrecklessly enthusiastic", "undeniably extant","pics like this"],
@@ -38,22 +39,25 @@ var education = {
       "degree": "Bachelor of Possibility",
       "majors" : ["Token"],
       "dates" : 2007,
-      "url" : "http://uga.edu"
+      "url" : "http://gunn.pausd.org/sites/default/files/AffordabilityCollegeExamples2015.pdf"
     }
     ],
     "onlineCourses" : [
       {
-        "title" : "Javascript Syntax",
+       "title" : "Front End Web Development",
         "school": "Udacity",
         "dates": 2015,
-        "url" : "http://www.udacity.com/course"
+        "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         
       },
       {
-        "title" : "Front End Web Development",
+        
+
+
+         "title" : "Javascript Syntax",
         "school": "Udacity",
         "dates": 2015,
-        "url" : "http://www.udacity.com/course"
+        "url" : "https://www.udacity.com/course/javascript-basics--ud804"
       }
       ]
   
@@ -66,15 +70,17 @@ var work = {
       "employer" : "Pearson Education",
       "title": "Scoring Analytics",
       "dates": "April 2015 - Current",
-      "description": "Scoring and Interpolating nationwide college entrance exam results, ensuring a fair and accurate score for every student."
+      "description": "Scoring and Interpolating nationwide college entrance exam results, ensuring a fair and accurate score for every student.",
+      "employerLink": "http://www.pearsoned.com/"
       
 },
 {
   "employer" : "Wyzant Tutoring",
       "title": "Master Tutor",
       "dates": "August 2011 - Current",
-      "description": "Working with students on subjects ranging from SAT prep to physics to elementary expository writing.  Driving these students to reach their potential by demonstrating how hard work, learning, and having fun can all be part of the same process."
-    }
+      "description": "Working with students on subjects ranging from SAT prep to physics to elementary expository writing. Driving these students to reach their potential by demonstrating how hard work, learning, and having fun can all be part of the same process.",
+   	  "employerLink": "https://www.wyzant.com/Tutors/GA/Augusta/7802914/"
+   }
   ]
 };
 
@@ -131,7 +137,7 @@ $("#topContacts").append(formattedGithub);
 
 
 
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location).replace("#" , bio.contacts.locationLink);
 $("#topContacts").append(formattedLocation);
 
 /////////////////picture////////////////
@@ -178,7 +184,7 @@ for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 
 	var formattedEmployer = HTMLworkEmployer.replace
-	("%data%", work.jobs[job].employer);
+	("%data%", work.jobs[job].employer).replace("#", work.jobs[job].employerLink);
 
 	var formattedTitle = HTMLworkTitle.replace
 	("%data%", work.jobs[job].title);
@@ -241,7 +247,7 @@ for (school in education.schools) {
 	$("#education").append(HTMLschoolStart);
 
 	var formattedSchoolName = HTMLschoolName.replace
-	("%data%", education.schools[school].name);
+	("%data%", education.schools[school].name).replace("#" , education.schools[school].url);
 	//$(".education-entry:last").append(formattedSchoolName);
 
 	var formattedSchoolDegree = HTMLschoolDegree.replace
@@ -271,7 +277,7 @@ for (course in education.onlineCourses) {
 	//$("#education").append(HTMLonlineClasses);
 
 	var formattedOnlineTitle = HTMLonlineTitle.replace
-	("%data%", education.onlineCourses[course].title);
+	("%data%", education.onlineCourses[course].title).replace("#", education.onlineCourses[course].url);
 	//$(".education-entry:last").append(formattedSchoolName);
 
 	var formattedOnlineSchool = HTMLonlineSchool.replace
