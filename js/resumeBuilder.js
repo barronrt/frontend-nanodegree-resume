@@ -47,7 +47,8 @@ var education = {
        "title" : "Front End Web Development",
         "school": "Udacity",
         "dates": 2015,
-        "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+        "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001",
+        "description" : "Learn the fundamentals of how the web works and gain a working knowledge of the three foundational languages that power each and every website: HTML, CSS and JavaScript. This Nanodegree will provide a guided, efficient path for you to learn to build beautiful, responsive websites optimized for security and performance. You’ll see the efforts of your work with each click of the browser’s refresh button!"
         
       },
       {
@@ -57,7 +58,8 @@ var education = {
          "title" : "Javascript Syntax",
         "school": "Udacity",
         "dates": 2015,
-        "url" : "https://www.udacity.com/course/javascript-basics--ud804"
+        "url" : "https://www.udacity.com/course/javascript-basics--ud804",
+        "description" : " In the twenty plus years since its inception, JavaScript has become the _lingua franca_ of the web, that's to say, it's become the main tool to create interactive content on the Internet."
       }
       ]
   
@@ -89,7 +91,7 @@ var projects = {
     {
       "title": "Just Java",
       "dates" : "2015",
-      "description" : "An app that lets you order coffee from your phone and calls up an email receipt based on that order. Let me know if you want free whipped cream-I can make it happen!",
+      "description" : "An app that lets you order coffee from your phone and calls up an email receipt based on that order. Let me know if you want free whipped cream or sprinkles-I can make it happen!",
       "images" : [
         "images/lookingOut.jpg",
         "images/walkThePlank.jpg"
@@ -288,9 +290,15 @@ for (course in education.onlineCourses) {
 	("%data%", education.onlineCourses[course].dates);
 	$(".education-entry:last").append(formattedOnlineDates);
 
-	var formattedOnlineURL = HTMLonlineURL.replace
-	("%data%", education.onlineCourses[course].url);
+	      //combined into online title
+
+	      /*   removing url, adding description
+	var formattedOnlineURL = HTMLonlineURL.replace("%data%", );
 	$(".education-entry:last").append(formattedOnlineURL);
+	*/
+	
+	var formattedOnlineDescription = HTMLonlineDescription.replace("%data%", education.onlineCourses[course].description);
+	$(".education-entry:last").append(formattedOnlineDescription);
 
 }
 
