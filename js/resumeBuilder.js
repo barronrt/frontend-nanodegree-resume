@@ -11,7 +11,7 @@ var bio = {
 		"mobile": "555-555-5555",
 		"email": "barronrt@gmail.com",
 		"github": "github.com/barronrt",
-		"githubLink": "github.com/barronrt",
+		"githubLink": "https://www.github.com/barronrt",
 		"twitter": "something",
 		"location": "Atlanta",
 		"locationLink": "https://www.google.com/search?q=atlanta&espv=2&biw=1535&bih=791&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjGoPDKqdvJAhWKMSYKHSagDx8Q_AUICCgD&dpr=1"
@@ -132,7 +132,7 @@ $("#topContacts").append(formattedEmail);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 $("#topContacts").append(formattedTwitter);
 
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("#", bio.contacts.githubLink);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("#" , bio.contacts.githubLink);
 $("#topContacts").append(formattedGithub);
 
 
@@ -329,7 +329,7 @@ $(document).click(function(loc) {
 ///////////string to array manipulation/////////////////
 
 var myString = "This is my string !";
-var myStringSplit = myString.split(" ");
+var myStringSplit =   myString.split(" ");
 myStringSplit
 
 
